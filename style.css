@@ -1,0 +1,488 @@
+
+/* 1. Our colour palette */
+:root {
+    --pink: #f6cadd;
+    --lavender: #e5ddff;
+    --cream: #fffaf2;
+    --ink: #514354;
+    --purple: #9879c9;
+    --white: #ffffff;
+}
+
+/* 2. Make sizing predictable */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 10% 15%, #ffe1ed 0, transparent 30%),
+        radial-gradient(circle at 90% 80%, #e6dcff 0, transparent 32%),
+        var(--cream);
+}
+
+/* 3. Navigation bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    gap: 12px;
+}
+
+.logo {
+    color: var(--ink);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e78caf;
+}
+
+.status {
+    font-size: 0.8rem;
+    color: #8c7993;
+}
+
+/* 4. Main content */
+.container {
+    width: min(100% - 32px, 620px);
+    margin: 40px auto;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--purple);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin: 16px 0 10px;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    color: #827487;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* 5. The main card */
+.roast-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #f1e2f0;
+    border-radius: 28px;
+    padding: 35px 28px;
+    box-shadow: 0 18px 50px #8e72a515;
+}
+
+.sticker {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    color: #e89cbd;
+    font-size: 1.7rem;
+}
+
+.mascot {
+    width: 85px;
+    height: 85px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    background: var(--lavender);
+    border-radius: 28px;
+    font-size: 2.8rem;
+    transform: rotate(-5deg);
+}
+
+h2 {
+    margin: 12px 0;
+}
+
+.card-description {
+    color: #948399;
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #e8d8ef;
+    border-radius: 14px;
+    background: var(--cream);
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(110deg, #f4bfd6, #d8c8ff);
+    color: #514354;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px #b49acb40;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+}
+
+/* 6. Roast result */
+.result {
+    margin-top: 22px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #fff4f8;
+    border: 1px dashed #edc4d8;
+}
+
+.result-label {
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ac84b2;
+}
+
+#roast-text {
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.copy-button {
+    margin-top: 8px;
+    background: var(--white);
+    border: 1px solid #ead7ed;
+    padding: 10px;
+}
+
+.copy-button[hidden] {
+    display: none;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: #a292a5;
+    margin-top: 22px;
+}
+
+footer {
+    margin: 35px 0;
+    color: #9b8ca0;
+    font-size: 0.75rem;
+}
+
+/* 7. Small-screen adjustments */
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 18px 16px;
+    }
+
+    .status {
+        font-size: 0.68rem;
+    }
+
+    .container {
+        margin-top: 24px;
+    }
+
+    .roast-card {
+        padding: 30px 18px;
+    }
+}
+
+/* ===== LOVE CALCULATOR ===== */
+
+.love-card {
+    position: relative;
+    margin-top: 32px;
+    padding: 32px 26px;
+    background: linear-gradient(145deg, #fff0f6, #f3edff);
+    border: 1px solid #efd9ef;
+    border-radius: 28px;
+    box-shadow: 0 18px 45px #a88ac51a;
+}
+
+.love-icon {
+    font-size: 2.7rem;
+    margin-bottom: 8px;
+}
+
+.section-label {
+    color: #b17ba8;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.love-card h2 {
+    line-height: 1.4;
+}
+
+.love-description {
+    color: #89758f;
+    line-height: 1.7;
+}
+
+.love-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0 16px;
+    text-align: left;
+}
+
+.love-inputs input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #e6d5ed;
+    border-radius: 12px;
+    background: #fffdfd;
+    color: #514354;
+    font: inherit;
+}
+
+.love-inputs input:focus-visible {
+    outline: 3px solid #bca5ec;
+    outline-offset: 2px;
+}
+
+.love-card button {
+    background: linear-gradient(110deg, #f5bfd9, #d9c8ff);
+}
+
+.love-result {
+    margin-top: 22px;
+    padding: 22px 14px;
+    background: #ffffffb8;
+    border: 1px dashed #e5bddb;
+    border-radius: 18px;
+}
+
+#love-hearts {
+    color: #e58cb6;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+#love-score {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+#love-verdict {
+    color: #826c8b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.love-result.reveal {
+    animation: love-pop 0.45s ease-out;
+}
+
+@keyframes love-pop {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.96);
+    }
+
+    70% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 420px) {
+    .love-inputs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .love-result.reveal {
+        animation: none;
+    }
+}
+
+/* ===== EXAM SOS ===== */
+
+.sos-card {
+    margin-top: 32px;
+    padding: 30px 24px;
+    background: linear-gradient(145deg, #f0f7ff, #f8efff);
+    border: 1px solid #e1dafa;
+    border-radius: 28px;
+    box-shadow: 0 18px 45px #a88ac51a;
+}
+
+.sos-icon {
+    font-size: 2.7rem;
+    margin-bottom: 8px;
+}
+
+.sos-description {
+    color: #81758f;
+    line-height: 1.7;
+}
+
+.breathing-box,
+.brain-dump,
+.break-box {
+    margin-top: 22px;
+    padding: 20px;
+    background: #ffffffbd;
+    border: 1px solid #e8def4;
+    border-radius: 20px;
+}
+
+.breathing-circle {
+    width: 130px;
+    height: 130px;
+    margin: 12px auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d8ccff, #f6c9e4);
+    box-shadow: 0 0 0 10px #e9dfff65;
+    color: #514366;
+    font-weight: bold;
+    transition: transform 4s ease-in-out;
+}
+
+.breathing-circle.inhale {
+    transform: scale(1.2);
+}
+
+.breathing-circle.exhale {
+    transform: scale(0.85);
+    transition-duration: 6s;
+}
+
+#breathing-instruction {
+    color: #81758f;
+    line-height: 1.6;
+}
+
+.sos-card button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #dfd4ff, #f5cfe6);
+    color: #514354;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.sos-card button:hover {
+    transform: translateY(-2px);
+}
+
+.sos-card button:focus-visible,
+.sos-card textarea:focus-visible {
+    outline: 3px solid #bca5ec;
+    outline-offset: 3px;
+}
+
+.brain-dump h3,
+.break-box h3 {
+    margin-top: 0;
+}
+
+.brain-dump p,
+.break-box p {
+    color: #81758f;
+    line-height: 1.6;
+}
+
+#brain-dump-text {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 110px;
+    padding: 13px;
+    border: 1px solid #e6d5ed;
+    border-radius: 12px;
+    background: #fffdfd;
+    color: #514354;
+    font: inherit;
+    resize: vertical;
+}
+
+.dump-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+#character-count {
+    color: #95849b;
+    font-size: 0.8rem;
+}
+
+#clear-dump {
+    padding: 8px 12px;
+}
+
+#break-suggestion {
+    min-height: 48px;
+}
+
+@media (max-width: 420px) {
+    .sos-card {
+        padding: 22px 15px;
+    }
+
+    .breathing-box,
+    .brain-dump,
+    .break-box {
+        padding: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .breathing-circle,
+    .sos-card button {
+        transition: none;
+    }
+}

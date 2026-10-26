@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ctrl + Chaos | Roast Me</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="top-bar">
+        <a href="#" class="logo">ctrl + chaos <span>✿</span></a>
+        <span class="status">your daily dose of chaos ♡</span>
+    </header>
+
+    <main class="container">
+        <p class="eyebrow">WELCOME TO THE CHAOS CLUB</p>
+
+        <h1>Feeling brave?</h1>
+        <p class="subtitle">
+            Choose your roast. Protect your ego. Proceed anyway.
+        </p>
+
+        <section class="roast-card">
+            <div class="sticker">♡</div>
+
+            <div class="mascot" aria-hidden="true">😈</div>
+
+            <h2>Roast me, please!</h2>
+            <p class="card-description">
+                We promise it's all love. Mostly.
+            </p>
+
+            <label for="roast-type">Choose your chaos level</label>
+
+            <select id="roast-type">
+                <option value="gentle">🌷 Gentle roast</option>
+                <option value="bestie">💅 Bestie mode</option>
+                <option value="academic">📚 Academic disaster</option>
+                <option value="delulu">💘 Delulu department</option>
+            </select>
+
+            <button id="roast-button" type="button">
+                Roast me! 🔥
+            </button>
+
+            <div
+                id="result"
+                class="result"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                <span class="result-label">YOUR ROAST WILL APPEAR HERE</span>
+                <p id="roast-text">
+                    The roast machine is suspiciously quiet...
+                </p>
+
+                <button id="copy-button" class="copy-button"
+                    type="button" hidden>
+                    Copy roast ♡
+                </button>
+            </div>
+
+            <p class="disclaimer">
+                Just jokes, no actual emotional damage ✨
+            </p>
+        </section>
+        
+<!-- LOVE CALCULATOR -->
+<section class="love-card" id="love-section">
+    <div class="love-icon" aria-hidden="true">💌</div>
+
+    <p class="section-label">THE DELULU DEPARTMENT</p>
+    <h2>Is it love or just delusion?</h2>
+    <p class="love-description">
+        Two names enter. Absolutely unserious science happens.
+    </p>
+
+    <div class="love-inputs">
+        <div>
+            <label for="your-name">Your name</label>
+            <input
+                type="text"
+                id="your-name"
+                placeholder="Romeo..."
+                maxlength="30"
+            >
+        </div>
+
+        <div>
+            <label for="crush-name">Their name</label>
+            <input
+                type="text"
+                id="crush-name"
+                placeholder="Juliet..."
+                maxlength="30"
+            >
+        </div>
+    </div>
+
+    <button id="love-button" type="button">
+        Calculate our delulu 💗
+    </button>
+
+    <div id="love-result" class="love-result"
+         aria-live="polite" aria-atomic="true">
+        <div id="love-hearts" aria-hidden="true">♡ ♡ ♡</div>
+        <p id="love-score">Your result awaits...</p>
+        <p id="love-verdict">Enter two names to reveal your fate.</p>
+    </div>
+
+    <p class="disclaimer">
+        For giggles only. Your names cannot predict your love life. ♡
+    </p>
+</section>
+
+<!-- ===== EXAM SOS ===== -->
+<section class="sos-card" id="exam-sos">
+    <div class="sos-icon" aria-hidden="true">🆘</div>
+
+    <p class="section-label">THE ACADEMIC SURVIVAL ZONE</p>
+    <h2>Brain.exe has stopped working?</h2>
+    <p class="sos-description">
+        Breathe. You don't have to conquer the entire syllabus in one sitting.
+    </p>
+
+    <!-- BREATHING TOOL -->
+    <div class="breathing-box">
+        <div class="breathing-circle" id="breathing-circle">
+            <span id="breathing-text">Ready?</span>
+        </div>
+
+        <p id="breathing-instruction">
+            Take a tiny pause. Your brain deserves one.
+        </p>
+
+        <button id="breathe-button" type="button">
+            Start breathing 🌬️
+        </button>
+    </div>
+
+    <!-- BRAIN DUMP -->
+    <div class="brain-dump">
+        <h3>🧠 Empty your brain here</h3>
+        <p>Write down whatever is stressing you out.</p>
+
+        <textarea
+            id="brain-dump-text"
+            rows="4"
+            maxlength="1000"
+            placeholder="I have 3 chapters, 2 assignments, and 0 brain cells..."
+        ></textarea>
+
+        <div class="dump-actions">
+            <span id="character-count">0 / 1000</span>
+            <button id="clear-dump" type="button">Clear 🗑️</button>
+        </div>
+    </div>
+
+    <!-- STUDY BREAK GENERATOR -->
+    <div class="break-box">
+        <h3>🎲 Emergency study break</h3>
+        <p id="break-suggestion">
+            Need a reset? Generate a tiny break.
+        </p>
+
+        <button id="break-button" type="button">
+            Save my brain ✨
+        </button>
+    </div>
+
+    <p class="disclaimer">
+        Small steps count, too. You are a human, not a productivity machine. ♡
+    </p>
+</section>
+
+
+        <footer>
+            made with ☕, questionable decisions & a little CSS
+        </footer>
+    </main>
+</body>
+</html>
